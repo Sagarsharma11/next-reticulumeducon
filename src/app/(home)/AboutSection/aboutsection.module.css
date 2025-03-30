@@ -1,0 +1,47 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 3px solid gainsboro;
+    border-bottom: 3px solid gainsboro;
+    gap: 2rem;
+}
+.mainContainer h1{
+    font-size: 2.21rem;
+}
+
+.contentContainer{
+    display: flex;
+}
+
+.contentContainer img {
+    height: 300px;
+    width: 250px;
+    border: 5px solid;
+    border-radius: 5%;
+}
+.imageContainer, .paraContainer{
+    width: 100%;
+}
+.imageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and
+ (max-width: 480px) {
+    .contentContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .paraContainer{
+        padding: 0 .5rem;
+    }
+}
+
+/* @media screen and (min-width: 481px) and (max-width: 768px) {
+
+} */

@@ -1,7 +1,7 @@
-import Carousel from "@/components/Carousel";
-import Navbar from "@/components/Navbar";
-import SlickSlider from "@/components/LandingSection/SlickSlider";
-import FlagSection from "@/components/FlagSection/FlagSection";
+
+import FlagSection from "../components/FlagSection/FlagSection";
+import SlickSlider from "../components/LandingSection/SlickSlider";
+import AboutSection from "./(home)/AboutSection/AboutSection";
 
 
 export default function Home() {
@@ -9,6 +9,7 @@ export default function Home() {
     <>
       <SlickSlider />
       <FlagSection />
+      <AboutSection />
     </>
   );
 }
