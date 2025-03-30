@@ -1,0 +1,865 @@
+* {
+    margin: 0px
+}
+
+body {
+    margin-bottom: -18px;
+}
+
+.logo {
+    height: 130px;
+    width: 250px;
+    margin-top: -8px;
+}
+
+.navbar .nav-item {
+    margin-left: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+
+}
+
+.navbar .nav-item:hover {
+    transition: 3s;
+    border-bottom: 1px solid orangered;
+}
+
+.slider img {
+    height: 900px;
+}
+
+.slider .img-first {
+    height: 900px;
+    position: relative;
+}
+
+.slider .caption {
+    position: absolute;
+    top: 300px;
+    width: 100%;
+}
+
+.slider .caption h1 {
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 80px;
+    text-shadow: 2px 2px black;
+}
+
+.slider .caption p {
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 28px;
+    /* text-decoration: underline; */
+
+}
+
+.country img {
+    height: 200px;
+    width: 200px !important;
+    border: 2px solid orangered;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+
+.country .item h4 {
+    text-align: center;
+}
+
+.country .country-caption {
+    background-color: gray;
+    height: 150px;
+    clip-path: polygon(69% 0, 70% 0%, 100% 0, 100% 75%, 31% 100%, 30% 100%, 0 100%, 0 28%);
+}
+
+.myspan {
+    background-color: orangered;
+    color: white;
+    border-radius: 10px;
+}
+
+.span2 {
+    border-bottom: 4px solid orangered;
+}
+
+.aboutus {
+    border-top: 3px solid gainsboro;
+    border-bottom: 3px solid gainsboro;
+
+
+}
+
+.aboutus img {
+    height: 300px;
+    width: 250px;
+    display: block;
+    margin-top: -5px !important;
+    border: 5px solid;
+
+    margin: auto;
+    border-radius: 5%;
+
+
+}
+
+.aboutus .aboutus_social_media i {
+    font-size: 36px;
+
+
+}
+
+.aboutus .aboutus_social_media .fa-instagram {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+    border-radius: 25%;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    color: white;
+
+}
+
+.aboutus .aboutus_social_media {
+    padding-top: 3px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid orangered;
+    margin: auto;
+}
+
+
+
+.university {
+    box-shadow: rgba(110, 110, 134, 0.2) 0px 7px 29px 0px;
+    padding-top: 20px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.university img {
+    height: 200px;
+    box-shadow: rgba(110, 110, 134, 0.2) 0px 7px 29px 0px;
+
+}
+
+.university h4 {
+    text-align: center;
+    color: grey;
+}
+
+.service i {
+    font-size: 80px;
+}
+
+.service .fa-building {
+    color: cadetblue;
+}
+
+.service .fa-plane-departure {
+    color: red;
+}
+
+.service .fa-university {
+    color: green;
+}
+
+.service .card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.service .card :hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: 0.3s;
+
+}
+
+.contactus {
+    background-image: url("/assets/images/contactus.jpg");
+    background-repeat: no-repeat center center fixed;
+    background-position: center;
+    background-size: cover;
+    background-position: 10% 90%;
+    z-index: -1000;
+    contain: "";
+}
+
+
+
+.contactus iframe {
+    border: 4px solid orangered !important;
+}
+
+.contactus h1,
+label {
+    color: #1f1f1f;
+}
+
+.contact-banner {
+    background-image: url("/assets/images/contact-us-banner.jpg");
+    background-repeat: no-repeat center center fixed;
+    background-position: center;
+    background-size: cover;
+    background-position: 10% 90%;
+    z-index: -1000;
+    height: 450px;
+    border: 5px solid gainsboro;
+
+    contain: "";
+
+}
+
+.footer {
+    background-color: #1f1f1f;
+}
+
+.footer ul li {
+    list-style-type: none;
+    font-size: 28px;
+    border-bottom: 1px solid #f1f1f1;
+    text-align: center;
+    color: white;
+}
+
+.footer h2,
+.footer p {
+    color: white;
+}
+
+.footer i {
+    font-size: 40px;
+    margin-left: 5%;
+}
+
+.footer .social-media {
+    border-bottom: 4px solid orangered;
+    padding-bottom: 10px;
+
+}
+
+
+.footer .fa-facebook {
+    color: rgb(72, 72, 250);
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.footer .fa-facebook:hover {
+    transition: 1s;
+    transform: rotate(30deg);
+}
+
+.footer .fa-whatsapp {
+    color: greenyellow;
+}
+
+.footer .fa-whatsapp:hover {
+    transition: 1s;
+    transform: rotate(30deg);
+}
+
+.footer .fa-linkedin-in {
+    color: darkcyan;
+}
+
+.footer .fa-linkedin-in:hover {
+    transition: 1s;
+    transform: rotate(30deg);
+}
+
+.footer .fa-twitter {
+    color: rgb(29, 161, 242);
+}
+
+.footer .fa-twitter:hover {
+    transition: 1s;
+    transform: rotate(30deg);
+}
+
+.footer .fa-instagram {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+    border-radius: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+}
+
+.footer .fa-instagram:hover {
+    transition: 1s;
+    transform: rotate(30deg);
+}
+
+.footer .fa-youtube {
+    color: red;
+}
+
+.footer .fa-youtube:hover {
+    transition: 1s;
+    transform: rotate(30deg);
+}
+
+.footer .fa-phone {
+    font-size: 18px;
+    color: green;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.footer .fa-map-marker-alt {
+    color: tomato;
+    font-size: 38px;
+}
+
+.footer .fa-envelope-open {
+    color: tomato;
+    font-size: 28px;
+    margin-top: 1%;
+}
+
+/* .footer ul{
+    margin-top: 15%;
+} */
+footer {
+
+    margin: 0px;
+    min-height: -50px;
+}
+
+footer .col-sm-8 p {
+    margin-left: 10px;
+}
+
+footer .col-sm-4 p {
+    float: right;
+    margin-right: 10px;
+}
+
+.readbtn {
+    background-color: blue;
+    color: white;
+    border-radius: 25px;
+}
+
+.readbtn:hover {
+    color: blue;
+    background-color: white;
+    transition: 1s !important;
+}
+
+.youtube .video {
+    width: 100%;
+    height: 300px;
+    border: 2px solid gainsboro;
+    border-radius: 5px;
+}
+
+
+
+/* css About section  */
+
+.about-us-header {
+    background-color: #F75E0E;
+    height: 200px;
+    text-align: center;
+}
+
+.about-us-header h2 {
+    margin-top: 80px;
+}
+
+.about-us-header2 {
+    background-color: #1f1f1f;
+}
+
+.about-us-header h2 {
+    color: white;
+}
+
+.about-us-header h2 a {
+    color: white;
+    text-decoration: none;
+}
+
+.about-us-header2 p {
+    letter-spacing: 1px;
+    color: white;
+    text-shadow: 1px 1px #1f1f1f;
+    font-size: 28px;
+}
+
+.aboutus .aboutus_social_media i:hover {
+    transform: rotate(30deg);
+    transition: 3s;
+}
+
+.content-highlight a {
+    color: coral;
+    font-size: 32px;
+    font-weight: bolder;
+    text-shadow: 1px 1px yellow;
+    text-decoration: none;
+}
+
+.aboutus .fa-linkedin-in {
+    color: darkcyan;
+}
+
+.aboutus .fa-twitter {
+    color: rgb(29, 161, 242);
+}
+
+.aboutus .fa-facebook {
+    color: rgb(72, 72, 250);
+}
+
+table {
+    overflow-x: auto !important;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+.gallery img {
+    height: 280px;
+    width: 100%;
+    border: 2px solid gainsboro;
+    border-radius: 5px;
+    filter: brightness(0.5);
+
+
+
+
+}
+
+.gallery img:hover {
+
+    transition: 3s;
+
+
+    border: 2px solid gainsboro;
+    filter: brightness(1);
+
+}
+
+.map {
+    width: 100%;
+    height: 450px;
+}
+
+
+
+/* Responsive Index Page  */
+
+@media only screen and (max-width: 600px) {
+
+    .slider .caption {
+        position: absolute;
+        /* margin-top: 40px; */
+        top: 120px;
+
+        width: 100%;
+        /* border: 1px solid black; */
+    }
+
+    .slider .caption h1 {
+        color: white;
+        font-weight: bolder;
+        text-align: center;
+        font-size: 30px;
+        text-shadow: 2px 2px black;
+    }
+
+    .slider .caption p {
+        color: white;
+        font-weight: bolder;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .navbar .nav-item {
+        margin-left: 40%;
+
+    }
+
+    .nav-item .nav-link {
+        font-size: 18px;
+    }
+
+
+    .map {
+        height: 250px;
+        width: 95% !important;
+    }
+
+    .slider img {
+        height: 300px;
+        width: 100%;
+    }
+
+    body {
+        font-size: 85.5%;
+
+    }
+
+    .footer-menu {
+        margin-left: -30px;
+    }
+
+
+    .about-us h1 {
+        font-size: 80px !important;
+
+    }
+
+    .university h2 {
+        font-size: 20px;
+    }
+
+    ul li {
+        font-size: 100% !important;
+    }
+
+    input,
+    textarea {
+        width: 95% !important;
+    }
+
+    .university img {
+        height: 200px;
+        width: 95%;
+        box-shadow: rgba(110, 110, 134, 0.2) 0px 7px 29px 0px;
+
+    }
+
+    .country .country-caption {
+        background-color: gray;
+        height: 250px;
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        padding-bottom: 20px !important;
+        /* clip-path: polygon(69% 0, 70% 0%, 100% 0, 100% 75%, 31% 100%, 30% 100%, 0 100%, 0 28%); */
+    }
+
+    .logo {
+        height: 100px;
+        width: 180px;
+        margin-top: -8px;
+    }
+
+    .footer i {
+        font-size: 30px;
+        margin-left: 5%;
+    }
+
+    .footer .fa-phone {
+        font-size: 8px;
+        color: green;
+        border: 2px solid white;
+        border-radius: 50%;
+        padding-bottom: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+        padding-left: 5px;
+    }
+
+    .footer .fa-map-marker-alt {
+        color: tomato;
+        font-size: 24px;
+    }
+
+    .footer .fa-envelope-open {
+        color: tomato;
+        font-size: 18px;
+        margin-top: 1%;
+    }
+
+    .top-header {
+        display: none;
+    }
+
+    .about-us-header2 p {
+        font-size: 12px;
+    }
+
+    .country h1 {
+        font-size: 48px;
+        font-weight: bolder;
+    }
+
+    .aboutus .aboutus_social_media i {
+        margin-left: 10%;
+    }
+
+    .about-us-header {
+        height: 60px;
+    }
+
+    .about-us-header h2 {
+        margin-top: 12px;
+    }
+
+    .gallery img {
+        height: 280px;
+        width: 100%;
+        border: 2px solid gainsboro;
+        border-radius: 3px;
+        filter: brightness(1);
+        margin-top: 10px;
+    }
+
+    .contact-banner {
+        background-image: url("/assets/images/contact-us-banner.jpg");
+        background-repeat: no-repeat center center fixed;
+        background-position: center;
+        background-size: cover;
+        background-position: 10% 90%;
+        z-index: -1000;
+        height: 250px;
+        border: 5px solid gainsboro;
+
+        contain: "";
+
+    }
+
+}
+
+/* russia  page start here */
+@media only screen and (max-width: 600px) {
+    .d-grid {
+        width: 200px;
+    }
+
+    .d-grid button {
+        background-color: #bc1888;
+    }
+
+    /* servise we provide font size */
+    .service ul {
+        font-size: 16px;
+    }
+
+    /* about us page font size */
+    .aboutus p {
+        font-size: 18px;
+    }
+
+    /* country page font size */
+    .list-content ul {
+        font-size: 16px;
+    }
+
+    .list-content p {
+        font-size: 16px;
+    }
+
+    .list-content p span {
+        font-size: 16px;
+    }
+
+    .elementor-widget-container ul {
+        font-size: 17px;
+    }
+
+    .elementor-widget-container ol {
+        font-size: 17px;
+    }
+
+    .elementor-widget-container p {
+        font-size: 17px;
+    }
+
+    .detail tr td p {
+        font-size: 17px;
+    }
+
+    .wpb_wrapper p {
+        font-size: 17px;
+    }
+
+    .wpb_wrapper ul {
+        font-size: 17px;
+    }
+
+}
+
+.myBtn1 {
+    position: fixed;
+    height: 30px;
+    width: 325px;
+    background-color: #f1f1f1;
+    bottom: 65px;
+    right: 120px;
+    z-index: 99;
+
+    padding: 0px 10px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bolder;
+    border: none;
+    outline: none;
+    background-color: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.myBtn2 {
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    bottom: 35px;
+    right: 10px;
+    z-index: 99;
+    font-size: 40px;
+    border: none;
+    outline: none;
+    background-color: none;
+    color: rgb(11, 155, 42);
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.myBtn2 img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.social-media-fixed {
+    position: fixed;
+    height: 180px;
+    top: 400px;
+    width: 70px;
+    background-color: #f1f1f1;
+    bottom: 400px;
+    /* right: -200px; */
+    z-index: 99;
+    left: 0px;
+    padding: 0px 10px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-size: 22px;
+
+    font-weight: bolder;
+    border: none;
+    outline: none;
+    background-color: none;
+    color: black;
+    background-color: transparent;
+
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.social-media-fixed div {
+    border: 1px solid gainsboro;
+    background-color: whitesmoke;
+    height: 60px;
+    width: 60px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .slider img {
+        height: 300px !important;
+    }
+
+    .myBtn1 {
+        position: fixed;
+        height: 30px;
+        width: 250px;
+        /* background-color: #f1f1f1; */
+        bottom: 40px;
+        right: 80px;
+        /* z-index: 99; */
+        padding: 3px 7px;
+        text-decoration: none;
+        font-size: 16px;
+        /* border: none;
+        outline: none;
+        background-color: none;
+        color: black;
+        cursor: pointer;
+        border-radius: 10px; */
+    }
+
+    .myBtn2 {
+        position: fixed;
+        height: 80px;
+        width: 80px;
+        bottom: 17px;
+        right: 30px;
+        z-index: 99;
+        font-size: 40px;
+        border: none;
+        outline: none;
+        background-color: none;
+        color: rgb(11, 155, 42);
+        cursor: pointer;
+        border-radius: 30px;
+    }
+
+    .myBtn2 img {
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+    }
+
+    .social-media-fixed {
+        position: fixed;
+        height: 180px;
+        top: 380px;
+        width: 70px;
+        background-color: #f1f1f1;
+
+
+        z-index: 99;
+        left: 0px;
+
+        padding: 0px 10px;
+        padding-bottom: 5px;
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: bolder;
+        border: none;
+        outline: none;
+        background-color: none;
+        color: black;
+        background-color: transparent;
+
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .why-us h1 {
+        font-size: 22px;
+    }
+}
