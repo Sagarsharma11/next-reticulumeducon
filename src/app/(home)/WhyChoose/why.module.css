@@ -1,0 +1,30 @@
+.mainContainer{
+    padding: 1rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.innerContainer{
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1rem 5rem;
+}
+
+.mainContainer h1{
+    font-size: 2.1rem;
+}
+
+@media screen and
+ (max-width: 480px) {
+    .mainContainer{
+        padding: 1rem 2rem;
+    }
+    .innerContainer{
+        padding: 1rem 2rem;
+    }
+}
+
+/* @media screen and (min-width: 481px) and (max-width: 768px) {
+
+} */
+
