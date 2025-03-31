@@ -1,0 +1,79 @@
+.university-slider {
+    height: 20rem;
+    /* Ensures a fixed height */
+    position: relative;
+    /* Ensures positioning for child elements */
+    overflow: hidden;
+    /* Prevents any unwanted overflow */
+}
+
+/* Ensuring slick-list takes the full height */
+.university-slider .slick-list {
+    height: 100%;
+}
+
+/* Ensuring slides take full height */
+.university-slider .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Fixing the image sizing issue */
+.university-slider .slick-slide img {
+    height: 200px;
+    width: 300px !important;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* Arrows Styling */
+.university-slider .slick-prev {
+    left: 10px;
+    z-index: 2;
+    border: 1px solid;
+    background-color: #1f1f1f;
+    top: 80%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.university-slider .slick-next {
+    right: 10px;
+    z-index: 2;
+    background-color: #1f1f1f;
+    top: 80%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+}
+
+/* Dots Styling */
+.university-slider .slick-dots {
+    z-index: 5;
+    bottom: 10px;
+}
+
+.university-slider .slick-dots li button:before {
+    font-size: 12px;
+    color: white;
+}
+
+.university-slider .slick-dots li.slick-active button:before {
+    display: none;
+}
+
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+
+    /* Arrows Styling */
+    .university-slider .slick-prev {
+        display: none !important;
+    }
+
+    .university-slider .slick-next {
+        display: none !important;
+    }
+}

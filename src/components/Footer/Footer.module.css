@@ -1,0 +1,48 @@
+.paraContainer{
+    width: 40rem;
+}
+
+.rights{
+    /* 'bg-black text-white flex justify-between px-2' */
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .paraContainer{
+        width: 20rem;
+    }
+
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .paraContainer{
+        width: 20rem;
+    }
+    .rights{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+
+@media screen and (max-width: 480px){
+    .paraContainer{
+        width: 100%;
+    }
+    .rights{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
