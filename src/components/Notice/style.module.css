@@ -1,0 +1,24 @@
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.marquee {
+    display: inline-block;
+    animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+/* Stop animation on hover */
+.marquee-container:hover .marquee {
+    animation-play-state: paused;
+}

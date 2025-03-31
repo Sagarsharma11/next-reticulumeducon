@@ -100,9 +100,9 @@ const Footer = () => {
             <div className={styles.rights}>
                 <div> Copyright ©2021-2022 | <a href="index.php" >WWW.RETICULUM.COM </a> All Rights Reserved</div>
 
-               <div>
-               Design & Devlop By <a href="https://sagarsharma.vercel.app" target='__blank' className={"text-green-400"} >Sagar Sharma</a>
-               </div>
+                <div>
+                    Design & Devlop By <a href="https://sagarsharma.vercel.app" target='__blank' className={"text-green-400"} >Sagar Sharma</a>
+                </div>
             </div>
         </>
     )
