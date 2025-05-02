@@ -70,8 +70,8 @@ const Navbar = () => {
                             </ul>
                         </li>
                         <li><a href="/about">About</a></li>
-                        <li><a>Services</a></li>
-                        <li><a>Gallery</a></li>
+                        <li><a href='/service'>Services</a></li>
+                        <li><a href='/gallery'>Gallery</a></li>
                         <li><a>Contact-us</a></li>
                     </ul>
                 </div>
@@ -95,8 +95,8 @@ const Navbar = () => {
                         </details>
                     </li>
                     <li><a href="/about">About</a></li>
-                    <li><a>Services</a></li>
-                    <li><a>Gallery</a></li>
+                    <li><a href='/service'>Services</a></li>
+                    <li><a href='/gallery'>Gallery</a></li>
                     <li><a>Contact-us</a></li>
                 </ul>
             </div>

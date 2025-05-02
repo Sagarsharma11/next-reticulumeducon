@@ -1,0 +1,13 @@
+.middleSection{
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px){
+    .middleSection{
+        height: 100%;
+    }
+}
