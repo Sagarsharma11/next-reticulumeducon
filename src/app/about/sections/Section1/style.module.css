@@ -1,0 +1,45 @@
+.mainContainer{
+    padding: 2rem 4rem;
+}
+
+.innerContainer{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    padding: 2rem 4rem;
+    border-radius: .125rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .mainContainer{
+        padding: 2rem;
+    }
+    
+    .innerContainer{
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        padding: 2rem ;
+        border-radius: .125rem;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .mainContainer{
+        padding: 2rem;
+    }
+    
+    .innerContainer{
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        padding: 2rem ;
+        border-radius: .125rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mainContainer{
+        padding: 2rem;
+    }
+    
+    .innerContainer{
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        padding: 1rem ;
+        border-radius: .125rem;
+    }
+}

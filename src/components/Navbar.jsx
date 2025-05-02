@@ -58,7 +58,7 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-white rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li>
                             <a>Countries</a>
                             <ul className="p-2 bg-white">
@@ -69,7 +69,7 @@ const Navbar = () => {
                                 }
                             </ul>
                         </li>
-                        <li><a>About</a></li>
+                        <li><a href="/about">About</a></li>
                         <li><a>Services</a></li>
                         <li><a>Gallery</a></li>
                         <li><a>Contact-us</a></li>
@@ -81,7 +81,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 z-1">
-                    <li><a>Home</a></li>
+                    <li><a href='/'>Home</a></li>
                     <li>
                         <details>
                             <summary>Countries</summary>
@@ -94,7 +94,7 @@ const Navbar = () => {
                             </ul>
                         </details>
                     </li>
-                    <li><a>About</a></li>
+                    <li><a href="/about">About</a></li>
                     <li><a>Services</a></li>
                     <li><a>Gallery</a></li>
                     <li><a>Contact-us</a></li>
