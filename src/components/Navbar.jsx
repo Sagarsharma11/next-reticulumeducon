@@ -72,7 +72,7 @@ const Navbar = () => {
                         <li><a href="/about">About</a></li>
                         <li><a href='/service'>Services</a></li>
                         <li><a href='/gallery'>Gallery</a></li>
-                        <li><a>Contact-us</a></li>
+                        <li><a href="/contact-us">Contact-us</a></li>
                     </ul>
                 </div>
                 <a className="text-xl">
@@ -97,7 +97,7 @@ const Navbar = () => {
                     <li><a href="/about">About</a></li>
                     <li><a href='/service'>Services</a></li>
                     <li><a href='/gallery'>Gallery</a></li>
-                    <li><a>Contact-us</a></li>
+                    <li><a href="/contact-us">Contact-us</a></li>
                 </ul>
             </div>
         </div>

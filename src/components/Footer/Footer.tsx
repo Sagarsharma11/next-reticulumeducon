@@ -56,22 +56,22 @@ const Footer = () => {
                             </svg>
                         </a>
                         <a href="https://www.facebook.com/reticulumeducon" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current">
                                 <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H7v-3h3.5V9.5c0-3.4 2-5.2 5-5.2 1.4 0 2.9.3 2.9.3v3.2H16c-1.6 0-2.1 1-2.1 2v2.2h3.6l-.6 3h-3v7A10 10 0 0 0 22 12z" />
                             </svg>
                         </a>
                         <a href="https://wa.me/91+7667962400" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current">
                                 <path d="M12 2A10 10 0 0 0 2 12a9.8 9.8 0 0 0 1.4 5.2L2 22l4.9-1.3A10 10 0 1 0 12 2zm4.3 13.6c-.3.9-1.5 1.6-2.6 1.6-.6 0-1.4-.2-2.2-.6-1.1-.6-2.2-1.8-3-3.1-.7-1.2-1-2.2-.9-3 .2-1.1.9-2.3 1.8-2.5h.6c.2 0 .5.6.7 1.3.1.7.3 1.3.2 1.5-.1.3-.2.3-.4.6-.2.2-.3.3-.5.5-.2.2-.4.4-.2.7.1.3.5.8.8 1.2.5.6 1.1 1.1 1.8 1.4.2.1.4.1.6-.1.2-.2.8-.9 1-.9s.5 0 .8.2c.3.1 1 .4 1.1.5.2.1.3.2.4.3 0 .3 0 .7-.1 1z" />
                             </svg>
                         </a>
                         <a href="https://www.linkedin.com/in/reticulum-educon-937187229" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current">
                                 <path d="M4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm0 5h4v12H4V8zm6 0h4v1.7c.6-1.2 2.3-2 4-2 4 0 4.7 2.6 4.7 6v6h-4v-5.5c0-1.3 0-3-2-3s-2.3 1.4-2.3 3V20h-4V8z" />
                             </svg>
                         </a>
                         <a href="https://www.instagram.com/retic_ulum/?r=nametag" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current">
                                 <path d="M12 2.2c3.1 0 3.5 0 4.7.1 3.2.2 4.7 1.7 4.9 4.9.1 1.2.1 1.6.1 4.7s0 3.5-.1 4.7c-.2 3.2-1.7 4.7-4.9 4.9-1.2.1-1.6.1-4.7.1s-3.5 0-4.7-.1c-3.2-.2-4.7-1.7-4.9-4.9-.1-1.2-.1-1.6-.1-4.7s0-3.5.1-4.7c.2-3.2 1.7-4.7 4.9-4.9 1.2-.1 1.6-.1 4.7-.1m0-2.2C8.8 0 8.4 0 7.2.1 2.5.3.3 2.5.1 7.2 0 8.4 0 8.8 0 12s0 3.6.1 4.8c.2 4.7 2.4 6.9 7.1 7.1C8.4 24 8.8 24 12 24s3.6 0 4.8-.1c4.7-.2 6.9-2.4 7.1-7.1.1-1.2.1-1.6.1-4.8s0-3.6-.1-4.8c-.2-4.7-2.4-6.9-7.1-7.1C15.6 0 15.2 0 12 0z" />
                             </svg>
                         </a>
@@ -83,15 +83,13 @@ const Footer = () => {
                         </p>
                     </div>
                     <div className="flex items-center gap-1">
-
-
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current">
                             <path d="M6.6 10.8c1.5 3.1 4.5 6.1 7.6 7.6l2.5-2.5c.3-.3.8-.4 1.2-.3 1.3.4 2.7.6 4.1.6.6 0 1 .4 1 1v3.9c0 .6-.4 1-1 1C9.3 22 2 14.7 2 6.1c0-.6.4-1 1-1h3.9c.6 0 1 .4 1 1 0 1.4.2 2.8.6 4.1.1.4 0 .9-.3 1.2l-2.6 2.4z" />
                         </svg>
                         <a href="tel:+918862851969" target="_blank">
                             8862851969,
                         </a>
-                        <a class="text-decoration-none" href="tel:7667962400">
+                        <a className="text-decoration-none" href="tel:7667962400">
                             7667962400
                         </a>
                     </div>
