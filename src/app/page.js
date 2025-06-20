@@ -6,6 +6,7 @@ import AboutSection from "./(home)/AboutSection/AboutSection";
 import WhyChoose from "./(home)/WhyChoose/WhyChoose";
 import LatestNews from "./(home)/LatestNews/LatestNews";
 import Service from "./(home)/Service/Service";
+import Section3 from "./(home)/Section3/Section3";
 
 
 export default function Home() {
@@ -13,7 +14,8 @@ export default function Home() {
     <>
       <SlickSlider />
       <FlagSection />
-      <AboutSection />
+      {/* <AboutSection /> */}
+      <Section3/>
       <WhyChoose />
       <MbbsAbroad />
       <LatestNews />

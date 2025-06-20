@@ -76,7 +76,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <a className="text-xl">
-                    <img src="/assets/images/logo.png" className="logo" alt="logo-image" height="40" width="70" />
+                    <img src="/assets/images/logo/logo.jpeg" className="logo" alt="logo-image" height="40" width="70" />
                 </a>
             </div>
             <div className="navbar-center hidden lg:flex">

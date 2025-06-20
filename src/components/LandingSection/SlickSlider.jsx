@@ -24,28 +24,28 @@ export default function SimpleSlider() {
             <Slider className="landing-slider" {...settings}>
                 <div>
                     <img
-                        src="/assets/images/slide7.jpeg"
+                        src="/assets/images/slider/slide1.jpg"
                         className="w-full" />
-                    <div class={styles.caption} >
+                    <div className={styles.caption} >
                         <h1>WELCOME TO RETICULUM EDUCON </h1>
                         <p> YOUR SUCCESS IS OUR AIM</p>
                     </div >
                 </div>
                 <div>
                     <img
-                        src="/assets/images/slide8.jpeg"
+                        src="/assets/images/slider/slide2.jpg"
                         className="w-full" />
                 </div>
                 <div>
                     <img
-                        src="/assets/images/slide9.jpeg"
+                        src="/assets/images/slider/slide3.jpg"
                         className="w-full" />
                 </div>
-                <div>
+                {/* <div>
                     <img
-                        src="/assets/images/slidex.jpeg"
+                        src="/assets/images/slider/slide1.jpg"
                         className="w-full" />
-                </div>
+                </div> */}
             </Slider>
 
         </>

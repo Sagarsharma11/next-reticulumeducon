@@ -10,7 +10,7 @@ const AboutSection = () => {
             <div className={styles.contentContainer}>
                 <div className={styles.imageContainer}>
                     <img src="assets/images/Naushad Alam1.jpeg" alt="" />
-                    <p class="text-center fw-bold">
+                    <p className="text-center fw-bold">
                         Naushad Alam <br />(Founder & M.D.)
                     </p>
                 </div>
