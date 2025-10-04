@@ -9,6 +9,7 @@ import Service from "./(home)/Service/Service";
 import Section3 from "./(home)/Section3/Section3";
 
 
+
 export default function Home() {
   return (
     <>
@@ -20,6 +21,7 @@ export default function Home() {
       <MbbsAbroad />
       <LatestNews />
       <Service />
+   
     </>
   );
 }
