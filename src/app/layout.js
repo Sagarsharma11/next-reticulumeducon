@@ -24,11 +24,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="synthweave">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Notice />
-        <Navbar />
+        {/* <Notice /> */}
+        {/* <Navbar /> */}
         <ServiceWarning />
-        {children}
-        <Footer />
+        {/* {children} */}
+        <div className="flex justify-center items-center w-full h-dvh">
+          <p className="text-red-500">This website is unavailable due to pending payment. Please contact the developer</p>
+        </div>
+        {/* <Footer /> */}
       </body>
     </html>
   )
