@@ -1,10 +1,10 @@
 import React from 'react'
 import BreadCrumb from '../../components/BreadCrumb/BreadCrumb'
 import Section1 from './sections/Section1/Section1';
-import FlagSection from '../../components/FlagSection/FlagSection';
 import Section3 from './sections/Section3/Section3';
 import Service from '../(home)/Service/Service';
 import LatestNews from '../(home)/LatestNews/LatestNews';
+import FlagSection from '../../components/FlagSection/FlagSection';
 
 const page = () => {
   return (
