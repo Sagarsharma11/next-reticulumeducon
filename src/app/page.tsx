@@ -12,6 +12,7 @@ import FlagSection from "../components/FlagSection/FlagSection";
 
 
 export default function Home() {
+  // comment
   return (
     <>
       <SlickSlider />
