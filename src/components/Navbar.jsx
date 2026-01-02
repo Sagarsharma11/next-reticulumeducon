@@ -1,107 +1,126 @@
-import React from 'react'
+"use client";
+
+import React, { useState } from "react";
 
 const Navbar = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [countryOpen, setCountryOpen] = useState(false);
 
-    const countries = [
-        {
-            label: 'MBBS IN RUSSIA',
-            href: ""
-        },
-        {
-            label: 'MBBS IN UKRAINE',
-            href: ""
-        },
-        {
-            label: 'MBBS IN AZERBAIJAN',
-            href: ""
-        },
-        {
-            label: 'MBBS IN GEORGIA',
-            href: ""
-        },
-        {
-            label: 'MBBS IN KYRGYZSTAN',
-            href: ""
-        },
-        {
-            label: 'MBBS IN UZBEKISTAN',
-            href: ""
-        },
-        {
-            label: 'MBBS IN NEPAL',
-            href: ""
-        },
-        {
-            label: 'MBBS IN PHILIPPINES',
-            href: ""
-        },
-        {
-            label: 'MBBS IN MALASIYA',
-            href: ""
-        },
-        {
-            label: 'MBBS IN KAZAKHSTAN',
-            href: ""
-        },
+  const countries = [
+    "MBBS IN RUSSIA",
+    "MBBS IN UKRAINE",
+    "MBBS IN AZERBAIJAN",
+    "MBBS IN GEORGIA",
+    "MBBS IN KYRGYZSTAN",
+    "MBBS IN UZBEKISTAN",
+    "MBBS IN NEPAL",
+    "MBBS IN PHILIPPINES",
+    "MBBS IN MALAYSIA",
+    "MBBS IN KAZAKHSTAN",
+  ];
 
-    ]
+  return (
+    <header className="sticky top-0 z-50 bg-white shadow">
+      <nav className="max-w-7xl mx-auto px-4">
+        <div className="flex h-16 items-center justify-between">
 
-    return (
-        // <div className="navbar bg-base-100 shadow-sm sticky">
-        <div className="navbar bg-white shadow-sm sticky top-0 z-50">
+          {/* Logo */}
+          <a href="/" className="flex items-center">
+            <img
+              src="/assets/images/logo/logo.jpeg"
+              alt="Logo"
+              className="h-10 w-auto"
+            />
+          </a>
 
-            <div className="navbar-start">
-                <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-                    </div>
-                    <ul
-                        tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-white rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a href="/">Home</a></li>
-                        <li>
-                            <a>Countries</a>
-                            <ul className="p-2 bg-white">
-                                {
-                                    countries.map((ele, key) => (
-                                        <li className='hover:bg-blue-300' key={key}><a>{ele["label"]}</a></li>
-                                    ))
-                                }
-                            </ul>
-                        </li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href='/service'>Services</a></li>
-                        <li><a href='/gallery'>Gallery</a></li>
-                        <li><a href="/contact-us">Contact-us</a></li>
-                    </ul>
-                </div>
-                <a className="text-xl">
-                    <img src="/assets/images/logo/logo.jpeg" className="logo" alt="logo-image" height="40" width="70" />
-                </a>
-            </div>
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 z-1">
-                    <li><a href='/'>Home</a></li>
-                    <li>
-                        <details>
-                            <summary>Countries</summary>
-                            <ul className="p-2 w-[15rem] bg-white ">
-                                {
-                                    countries.map((ele, key) => (
-                                        <li className='hover:bg-blue-300' key={key}><a>{ele["label"]}</a></li>
-                                    ))
-                                }
-                            </ul>
-                        </details>
+          {/* Desktop Menu */}
+          <ul className="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-700">
+
+            <li>
+              <a href="/" className="hover:text-blue-600">Home</a>
+            </li>
+
+            {/* Countries Dropdown */}
+            <li
+              className="relative"
+              onMouseEnter={() => setCountryOpen(true)}
+              onMouseLeave={() => setCountryOpen(false)}
+            >
+              <button className="flex items-center gap-1 hover:text-blue-600">
+                Countries
+                <span className="text-xs">▼</span>
+              </button>
+
+              {countryOpen && (
+                <ul className="absolute top-full mt-2 w-64 rounded-md border bg-white shadow-lg">
+                  {countries.map((c, i) => (
+                    <li key={i}>
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm hover:bg-blue-50"
+                      >
+                        {c}
+                      </a>
                     </li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href='/service'>Services</a></li>
-                    <li><a href='/gallery'>Gallery</a></li>
-                    <li><a href="/contact-us">Contact-us</a></li>
+                  ))}
                 </ul>
-            </div>
-        </div>
-    )
-}
+              )}
+            </li>
 
-export default Navbar
+            <li><a href="/about" className="hover:text-blue-600">About</a></li>
+            <li><a href="/service" className="hover:text-blue-600">Services</a></li>
+            <li><a href="/gallery" className="hover:text-blue-600">Gallery</a></li>
+            <li><a href="/contact-us" className="hover:text-blue-600">Contact Us</a></li>
+          </ul>
+
+          {/* Mobile Hamburger */}
+          <button
+            className="lg:hidden text-2xl"
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
+            ☰
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {mobileOpen && (
+          <div className="lg:hidden border-t">
+            <ul className="flex flex-col gap-4 py-4 text-sm text-gray-700">
+
+              <li><a href="/">Home</a></li>
+
+              <li>
+                <button
+                  className="flex w-full justify-between"
+                  onClick={() => setCountryOpen(!countryOpen)}
+                >
+                  Countries
+                  <span>{countryOpen ? "▲" : "▼"}</span>
+                </button>
+
+                {countryOpen && (
+                  <ul className="mt-2 ml-4 space-y-2">
+                    {countries.map((c, i) => (
+                      <li key={i}>
+                        <a href="#" className="block">
+                          {c}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+
+              <li><a href="/about">About</a></li>
+              <li><a href="/service">Services</a></li>
+              <li><a href="/gallery">Gallery</a></li>
+              <li><a href="/contact-us">Contact Us</a></li>
+            </ul>
+          </div>
+        )}
+      </nav>
+    </header>
+  );
+};
+
+export default Navbar;
