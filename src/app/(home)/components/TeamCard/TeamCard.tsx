@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "../../Section3/style.module.css"
 
-const TeamCard = ({ ele }) => {
+const TeamCard = ({ ele }:any) => {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.imageContainer}>
