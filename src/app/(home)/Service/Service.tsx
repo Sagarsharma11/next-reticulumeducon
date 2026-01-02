@@ -14,7 +14,7 @@ const Service = () => {
     return (
         <div className={styles.mainContainer}>
             <h2>
-                Services <span class="span2">
+                Services <span className="span2">
                     We Provide
                 </span>
             </h2>

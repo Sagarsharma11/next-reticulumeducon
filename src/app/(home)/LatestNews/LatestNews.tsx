@@ -13,12 +13,13 @@ const LatestNews = () => {
         <div className={styles.mainContainer}>
 
             <h2>
-                Latest <span class="span2"> News </span>
+                Latest <span className="span2"> News </span>
             </h2>
             <div>
                 {
                     ytData.map((ele) => (
-                        <iframe class="video" src={ele} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe className="video" src={ele} title="YouTube video player" 
+                        frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     ))
                 }
             </div>

@@ -1,0 +1,20 @@
+.mainContainer{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.innerContainer{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    width: 100%;
+    padding: 2rem;
+    border-radius: .225rem;
+}
+
+@media screen and (max-width: 480px) {
+    .mainContainer {
+       padding: 1rem;
+    }
+ 
+ }
