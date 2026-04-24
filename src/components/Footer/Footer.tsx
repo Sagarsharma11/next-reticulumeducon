@@ -8,140 +8,141 @@ import {
   FaInstagram,
   FaPhoneAlt,
   FaMapMarkerAlt,
+  FaEnvelope,
 } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <>
-      {/* Main Footer */}
-      <footer className="bg-violet-700 text-white">
-        <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+    <footer className="bg-slate-900 text-gray-300 font-sans border-t-4 border-orange-500 relative overflow-hidden">
+      
+      {/* Background Decor */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/10 rounded-full blur-[100px] pointer-events-none transform translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] pointer-events-none transform -translate-x-1/2 translate-y-1/2"></div>
 
-          {/* About */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">About Reticulum Educon</h3>
-            <p className="text-sm text-gray-200 leading-relaxed">
-              Reticulum Educon LLP focuses on providing complete guidance for
-              MBBS aspirants. From consultation to admission, we simplify the
-              entire process so students and guardians can confidently move
-              forward and study at their dream medical college abroad.
-            </p>
+      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+        
+        {/* About Column */}
+        <div className="lg:col-span-1">
+          <h2 className="text-2xl font-black text-white tracking-tight mb-2 flex items-center">
+            RETICULUM<span className="text-orange-500">.</span>
+          </h2>
+          <p className="text-sm font-medium text-orange-400 mb-6 uppercase tracking-widest">Educon LLP</p>
+          <p className="text-sm text-gray-400 leading-relaxed mb-8">
+            Providing complete, transparent, and expert guidance for MBBS aspirants. We simplify the admission process so students can confidently step into their dream medical college abroad.
+          </p>
+          
+          {/* Social Icons */}
+          <div className="flex flex-wrap gap-3">
+            {[ 
+              { icon: FaTwitter, link: "https://twitter.com/RETICULUMEDUCON" },
+              { icon: FaYoutube, link: "https://www.youtube.com/@Mbbs-abroad" },
+              { icon: FaFacebookF, link: "https://www.facebook.com/reticulumeducon" },
+              { icon: FaWhatsapp, link: "https://wa.me/917667962400" },
+              { icon: FaLinkedinIn, link: "https://www.linkedin.com/in/reticulum-educon-937187229" },
+              { icon: FaInstagram, link: "https://www.instagram.com/retic_ulum" }
+            ].map((social, idx) => (
+              <a
+                key={idx}
+                href={social.link}
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:bg-orange-500 hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-lg"
+              >
+                <social.icon size={16} />
+              </a>
+            ))}
           </div>
+        </div>
 
-          {/* Company Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 text-sm text-gray-200">
-              <li><a href="/" className="hover:text-white">Home</a></li>
-              <li><a href="/about" className="hover:text-white">About Us</a></li>
-              <li><a href="/gallery" className="hover:text-white">Gallery</a></li>
-              <li><a href="/service" className="hover:text-white">Services</a></li>
-              <li><a href="/contact-us" className="hover:text-white">Contact Us</a></li>
-            </ul>
-          </div>
+        {/* Quick Links Column */}
+        <div className="lg:col-span-1">
+          <h3 className="text-white font-bold text-lg mb-6">Quick Links</h3>
+          <ul className="space-y-3 text-sm text-gray-400 font-medium">
+            {['Home', 'About Us', 'Gallery', 'Services', 'Contact Us'].map((link, idx) => {
+              const paths = ['/', '/about', '/gallery', '/service', '/contact-us'];
+              return (
+                <li key={idx}>
+                  <a href={paths[idx]} className="hover:text-orange-400 hover:translate-x-1 inline-block transition-all duration-300">
+                    {link}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
 
-          {/* Contact & Social */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+        {/* Top Destinations */}
+        <div className="lg:col-span-1">
+          <h3 className="text-white font-bold text-lg mb-6">Destinations</h3>
+          <ul className="space-y-3 text-sm text-gray-400 font-medium">
+            {['Russia', 'Kazakhstan', 'Georgia', 'Uzbekistan', 'Bangladesh'].map((country, idx) => (
+                <li key={idx}>
+                  <a href={`/mbbs/${country.toLowerCase()}`} className="hover:text-orange-400 hover:translate-x-1 inline-block transition-all duration-300">
+                    Study in {country}
+                  </a>
+                </li>
+            ))}
+          </ul>
+        </div>
 
-            {/* Address */}
-            <div className="flex items-start gap-2 text-sm text-gray-200 mb-4">
-              <FaMapMarkerAlt className="mt-1" />
-              <p>
-                <strong>H.O.</strong> – Bagdulhan, near P.K. Jha School, beside ITI
-                College Hajipur, Vaishali (Bihar) – 844101
+        {/* Contact info column */}
+        <div className="lg:col-span-1">
+          <h3 className="text-white font-bold text-lg mb-6">Get In Touch</h3>
+          
+          <div className="space-y-5">
+            <div className="flex items-start gap-4 text-sm text-gray-400">
+              <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 text-orange-500">
+                <FaMapMarkerAlt size={16} />
+              </div>
+              <p className="pt-1 leading-relaxed">
+                <strong className="text-white block mb-1">Head Office</strong>
+                Bagdulhan, near P.K. Jha School, beside ITI College Hajipur, Vaishali (Bihar) – 844101
               </p>
             </div>
 
-            {/* Phone */}
-            <div className="flex items-center gap-2 text-sm text-gray-200 mb-6">
-              <FaPhoneAlt />
-              <a href="tel:8862851969" className="hover:text-white">
-                8862851969
-              </a>
-              ,
-              <a href="tel:7667962400" className="hover:text-white">
-                7667962400
-              </a>
+            <div className="flex items-center gap-4 text-sm text-gray-400">
+              <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 text-orange-500">
+                <FaPhoneAlt size={14} />
+              </div>
+              <div className="pt-1 flex flex-col">
+                <a href="tel:8862851969" className="hover:text-orange-400 transition-colors">88628-51969</a>
+                <a href="tel:7667962400" className="hover:text-orange-400 transition-colors">76679-62400</a>
+              </div>
             </div>
 
-            {/* Social Icons */}
-            <div className="flex gap-4">
-              <a
-                href="https://twitter.com/RETICULUMEDUCON"
-                target="_blank"
-                className="hover:text-gray-300"
-              >
-                <FaTwitter size={18} />
-              </a>
-
-              <a
-                href="https://www.youtube.com/@Mbbs-abroad"
-                target="_blank"
-                className="hover:text-gray-300"
-              >
-                <FaYoutube size={18} />
-              </a>
-
-              <a
-                href="https://www.facebook.com/reticulumeducon"
-                target="_blank"
-                className="hover:text-gray-300"
-              >
-                <FaFacebookF size={18} />
-              </a>
-
-              <a
-                href="https://wa.me/917667962400"
-                target="_blank"
-                className="hover:text-gray-300"
-              >
-                <FaWhatsapp size={18} />
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/reticulum-educon-937187229"
-                target="_blank"
-                className="hover:text-gray-300"
-              >
-                <FaLinkedinIn size={18} />
-              </a>
-
-              <a
-                href="https://www.instagram.com/retic_ulum"
-                target="_blank"
-                className="hover:text-gray-300"
-              >
-                <FaInstagram size={18} />
-              </a>
-            </div>
+            {/* <div className="flex items-center gap-4 text-sm text-gray-400">
+              <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 text-orange-500">
+                <FaEnvelope size={14} />
+              </div>
+              <div className="pt-1 text-orange-400 hover:text-white transition-colors cursor-pointer">
+                info@reticulum.com
+              </div>
+            </div> */}
           </div>
         </div>
-      </footer>
 
-      {/* Bottom Bar */}
-      <div className="bg-violet-800 text-gray-200 text-sm">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between gap-2">
-          <div>
-            © 2021–2022 |{" "}
-            <a href="/" className="hover:text-white">
-              www.reticulum.com
-            </a>{" "}
-            | All Rights Reserved
-          </div>
-          <div>
+      </div>
+
+      {/* Bottom Legal Bar */}
+      <div className="border-t border-slate-800 bg-slate-950/50 backdrop-blur-md relative z-10">
+        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm font-medium text-gray-500">
+          <p>
+            &copy; {new Date().getFullYear()} <span className="text-white">Reticulum Educon LLP</span>. All Rights Reserved.
+          </p>
+          <p>
             Designed & Developed by{" "}
             <a
               href="https://sagarsharma.vercel.app"
               target="_blank"
-              className="text-green-400 hover:underline"
+              className="text-orange-500 hover:text-orange-400 transition-colors font-bold tracking-wide"
             >
               Sagar Sharma
             </a>
-          </div>
+          </p>
         </div>
       </div>
-    </>
+      
+    </footer>
   );
 };
 

@@ -1,49 +1,86 @@
 import React from 'react';
-import styles from "./why.module.css"
 
 const WhyChoose = () => {
+    const features = [
+        {
+            title: "Expert Medical Guidance",
+            desc: "Benefit from our qualified doctors panel and receive complete, transparent counseling from start to finish.",
+            icon: "👨‍⚕️"
+        },
+        {
+            title: "Direct University Access",
+            desc: "We ensure a direct approach to universities, selecting the best fit based on student needs and financial capacity.",
+            icon: "🏛️"
+        },
+        {
+            title: "End-to-End Support",
+            desc: "From local office assistance to post-admission and personal support, we are with you at every step.",
+            icon: "🤝"
+        },
+        {
+            title: "Safety & Comfort",
+            desc: "Student safety and comfort is our top priority. We provide dedicated local representatives abroad.",
+            icon: "🛡️"
+        },
+        {
+            title: "Highest Satisfaction Ratio",
+            desc: "Our Parent Satisfaction Ratio (PSR) and Student Satisfaction Ratio (SSR) are the highest in the industry.",
+            icon: "⭐"
+        },
+        {
+            title: "Lifelong Mentorship",
+            desc: "Students remain under our direct guidance for the entire duration of their course. Our reputation speaks for itself.",
+            icon: "🎓"
+        }
+    ];
+
     return (
-        <div className={styles.mainContainer}>
-                <h1>Why choose reticulum Educon ?</h1>
-            <div className={styles.innerContainer}>
-                <div>
-                    <h4 className='font-bold'>
-                        Key features
-                    </h4>
-                    <ul>
-                        <li>
-                            1. Qualified and experienced Doctors panel
-                        </li>
-                        <li>2. Complete Guidance and counseling
-                        </li>
-                        <li>3. Post Admission support and services
-                        </li>
-                        <li>4. Direct Approach to the university/ college
-                        </li>
-                        <li>5. Selection of best university on the student needs and finance
-                        </li>
-                        <li>6. Student safety and comfort
-                        </li>
-                        <li>7. Local office Assistance
-                        </li>
-                        <li>8. Transparent Approach
-                        </li>
-                        <li>9. Local representative
-                        </li>
-                        <li>10. Personal Assistance
-                        </li>
-                        <li>11.our PSR( PARENT SATISFACTION RATIO) and SSR( student satisfaction ratio) is highest as compared to any counsultancy
-                        </li>
-                        <li>12. The student will remain under my guidence till their entire duration of courses
-                        </li>
-                        <li>13.our reputation speaks for itself             ---- we always prefer to share contact details of our ex- students and student currently studying in various countries with their parent contact details. So if any student wants, they can speaks directly to know the facts and reality about that university on a first hand basis
-
-                        </li>
-                    </ul>
+        <section className="py-16 md:py-24 bg-slate-50 relative">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div className="text-center mb-16">
+                    <span className="text-orange-500 font-bold uppercase tracking-wider text-sm mb-2 shadow-orange-500/20 inline-block px-3 py-1 bg-orange-100 rounded-full">Our Core Values</span>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">
+                        Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">Reticulum Educon?</span>
+                    </h2>
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
+                        Discover the key features that make us the most trusted partner for your medical journey abroad.
+                    </p>
                 </div>
-            </div>
-        </div>
-    )
-}
 
-export default WhyChoose
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+                    {features.map((feature, idx) => (
+                        <div key={idx} className="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_8px_30px_rgb(249,115,22,0.1)] transition-all duration-300 transform hover:-translate-y-2 group">
+                            <div className="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center text-3xl mb-6 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                                {feature.icon}
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                                {feature.title}
+                            </h3>
+                            <p className="text-gray-600 leading-relaxed text-[15px]">
+                                {feature.desc}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Testimonial callout */}
+                <div className="mt-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-8 sm:p-10 text-center text-white shadow-[0_8px_30px_rgba(249,115,22,0.3)] relative overflow-hidden">
+                    <div className="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-white opacity-10 blur-2xl"></div>
+                    <div className="absolute bottom-0 left-0 -ml-8 -mb-8 w-32 h-32 rounded-full bg-white opacity-10 blur-2xl"></div>
+                    
+                    <h3 className="text-2xl sm:text-3xl font-bold mb-4 relative z-10">We prioritize absolute transparency.</h3>
+                    <p className="text-orange-100 max-w-3xl mx-auto text-lg mb-8 relative z-10">
+                        We always prefer to share contact details of our ex-students and students currently studying in various countries, along with their parents' details. Speak directly with them to know the facts and reality on a first-hand basis!
+                    </p>
+                    <a href="/contact-us" className="inline-block px-8 py-3 bg-white text-orange-600 font-bold rounded-xl shadow-lg hover:bg-gray-50 transition-colors relative z-10">
+                        Get in Touch Today
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    );
+};
+
+export default WhyChoose;

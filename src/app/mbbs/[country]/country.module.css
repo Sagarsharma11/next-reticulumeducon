@@ -1,0 +1,888 @@
+/* =====================================================================
+   Country Page Styles — MBBS Abroad Country Detail Page
+   ===================================================================== */
+
+/* ---------- Page Wrapper ---------- */
+.pageWrapper {
+  background: #f8f9fc;
+  min-height: 100vh;
+}
+
+/* ---------- Hero Banner ---------- */
+.heroBanner {
+  position: relative;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f2942 100%);
+  padding: 80px 24px 60px;
+  overflow: hidden;
+}
+
+.heroBanner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.heroBannerInner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heroBreadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.heroBreadcrumb a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.heroBreadcrumb a:hover {
+  color: #fff;
+}
+
+.heroBreadcrumb span {
+  color: #f97316;
+}
+
+.heroFlag {
+  font-size: 72px;
+  margin-bottom: 16px;
+  display: block;
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.4));
+}
+
+.heroTitle {
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  font-family: "Inter", "Oswald", sans-serif;
+}
+
+.heroTitle span {
+  background: linear-gradient(90deg, #f97316, #fb923c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroContent {
+  max-width: 800px;
+}
+
+.heroContent p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.heroStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.heroStat {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 14px 20px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  min-width: 120px;
+}
+
+.heroStat .statValue {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f97316;
+  display: block;
+}
+
+.heroStat .statLabel {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  display: block;
+  margin-top: 4px;
+}
+
+/* ---------- Main Layout ---------- */
+.mainLayout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* ---------- Sticky Sidebar TOC ---------- */
+.sidebar {
+  position: sticky;
+  top: 80px;
+}
+
+.tocCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e8eaf0;
+}
+
+.tocTitle {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+
+.tocList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tocItem {
+  font-size: 13px;
+  color: #475569;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.tocItem::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #cbd5e1;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.tocItem:hover {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.tocItem:hover::before {
+  background: #f97316;
+}
+
+/* ---------- Content Area ---------- */
+.contentArea {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ---------- Section Card ---------- */
+.sectionCard {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e8eaf0;
+  scroll-margin-top: 90px;
+}
+
+.sectionHeading {
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #f1f5f9;
+  position: relative;
+  font-family: "Inter", "Oswald", sans-serif;
+}
+
+.sectionHeading::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #f97316, #fb923c);
+  border-radius: 2px;
+}
+
+/* ---------- Info Grid ---------- */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.infoCard {
+  background: linear-gradient(135deg, #f8faff 0%, #f1f5ff 100%);
+  border: 1px solid #e0e7ff;
+  border-radius: 14px;
+  padding: 18px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.infoCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.12);
+}
+
+.infoCardIcon {
+  font-size: 24px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.infoCardLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #6366f1;
+  margin-bottom: 6px;
+}
+
+.infoCardValue {
+  font-size: 14px;
+  color: #1e293b;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* ---------- Content / Paragraph ---------- */
+.contentText {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #374151;
+  font-family: "Inter", "Quicksand", sans-serif;
+}
+
+/* ---------- Numbered List ---------- */
+.numberedList {
+  counter-reset: item;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.numberedList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 15px;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.numberedList li::before {
+  counter-increment: item;
+  content: counter(item);
+  min-width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ---------- Cards Section ---------- */
+.cardsIntro {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #374151;
+  margin-bottom: 24px;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.featureCard {
+  background: linear-gradient(135deg, #fff 0%, #fafbff 100%);
+  border: 1px solid #e8eaf0;
+  border-radius: 16px;
+  padding: 24px 18px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(249, 115, 22, 0.12);
+  border-color: #fed7aa;
+}
+
+.featureCardIcon {
+  font-size: 36px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.featureCardTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.featureCardDesc {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* ---------- Comparison Table ---------- */
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid #e8eaf0;
+}
+
+.comparisonTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.comparisonTable thead tr {
+  background: linear-gradient(135deg, #0f172a, #1e3a5f);
+}
+
+.comparisonTable thead th {
+  padding: 16px 20px;
+  color: #fff;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.comparisonTable thead th:first-child {
+  border-radius: 12px 0 0 0;
+}
+
+.comparisonTable thead th:last-child {
+  border-radius: 0 12px 0 0;
+}
+
+.comparisonTable tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.2s;
+}
+
+.comparisonTable tbody tr:hover {
+  background: #fafbff;
+}
+
+.comparisonTable tbody tr:last-child {
+  border-bottom: none;
+}
+
+.comparisonTable tbody td {
+  padding: 14px 20px;
+  color: #374151;
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.comparisonTable tbody td:first-child {
+  font-weight: 600;
+  color: #0f172a;
+  background: #f8faff;
+  width: 160px;
+}
+
+.comparisonTable tbody td:last-child {
+  background: #fff7ed;
+  color: #374151;
+}
+
+/* ---------- Data Table ---------- */
+.tableIntro {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.dataTable thead tr {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+.dataTable thead th {
+  padding: 14px 18px;
+  color: #fff;
+  text-align: left;
+  font-weight: 600;
+}
+
+.dataTable tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.2s;
+}
+
+.dataTable tbody tr:nth-child(even) {
+  background: #f8faff;
+}
+
+.dataTable tbody tr:hover {
+  background: #fff7ed;
+}
+
+.dataTable tbody td {
+  padding: 12px 18px;
+  color: #374151;
+  vertical-align: middle;
+}
+
+.dataTable tbody td:first-child {
+  font-weight: 700;
+  color: #6366f1;
+  text-align: center;
+}
+
+/* ---------- University Detail ---------- */
+.universityCard {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e0e7ff;
+}
+
+.universityHeader {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.universityIconBox {
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.universityTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.universityBody {
+  padding: 24px;
+  background: #fff;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #374151;
+}
+
+/* ---------- Process Steps ---------- */
+.processSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.processSteps::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 24px;
+  bottom: 24px;
+  width: 2px;
+  background: linear-gradient(180deg, #f97316, #6366f1);
+  border-radius: 2px;
+}
+
+.processStep {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 16px 0;
+  position: relative;
+}
+
+.stepBadge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+.stepContent {
+  flex: 1;
+  padding-top: 8px;
+}
+
+.stepTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.stepDesc {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* ---------- Plain List ---------- */
+.listContent {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.bulletList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bulletList li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.bulletList li::before {
+  content: "✓";
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.listNote {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  border-radius: 0 8px 8px 0;
+  font-size: 13px;
+  color: #92400e;
+  line-height: 1.6;
+}
+
+/* ---------- FAQ ---------- */
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faqItem {
+  border: 1px solid #e8eaf0;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.faqItem.open {
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.1);
+  border-color: #c7d2fe;
+}
+
+.faqQuestion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  cursor: pointer;
+  background: #fff;
+  transition: background 0.2s;
+  gap: 12px;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.faqQuestion:hover {
+  background: #f8faff;
+}
+
+.faqItem.open .faqQuestion {
+  background: #f0f0ff;
+}
+
+.faqQuestionText {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.faqChevron {
+  width: 28px;
+  height: 28px;
+  background: #e8eaf0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #64748b;
+  flex-shrink: 0;
+  transition: all 0.3s;
+}
+
+.faqItem.open .faqChevron {
+  background: #6366f1;
+  color: #fff;
+  transform: rotate(180deg);
+}
+
+.faqAnswer {
+  padding: 0 20px 18px;
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.8;
+  background: #fff;
+  border-top: 1px solid #e8eaf0;
+}
+
+.faqItem.open .faqAnswer {
+  background: #fafbff;
+}
+
+/* ---------- CTA Strip ---------- */
+.ctaStrip {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  border-radius: 20px;
+  padding: 40px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.ctaText h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.ctaText p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.ctaBtn {
+  background: #fff;
+  color: #ea580c;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.ctaBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- Content Columns ---------- */
+.contentColumns {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ---------- Two Column Features ---------- */
+.twoColGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.featureCol {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #e8eaf0;
+}
+
+.featureColHeading {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #f97316;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e8eaf0;
+}
+
+.featureColItems {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.featureColItem {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.featureColIcon {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, #fff7ed, #ffedd5);
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.featureColTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.featureColDesc {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* ---------- Two Column List ---------- */
+.twoColListGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .mainLayout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroBanner {
+    padding: 50px 16px 40px;
+  }
+  .sectionCard {
+    padding: 24px 16px;
+  }
+  .infoGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cardsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ctaStrip {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 20px;
+  }
+  .comparisonTable {
+    font-size: 12px;
+  }
+  .comparisonTable tbody td {
+    padding: 10px 12px;
+  }
+  .heroStats {
+    gap: 10px;
+  }
+  .heroStat {
+    min-width: 90px;
+    padding: 10px 14px;
+  }
+}
