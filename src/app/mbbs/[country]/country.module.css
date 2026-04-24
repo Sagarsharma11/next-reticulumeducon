@@ -6,6 +6,7 @@
 .pageWrapper {
   background: #f8f9fc;
   min-height: 100vh;
+  overflow-x: hidden; /* Added to prevent horizontal scroll */
 }
 
 /* ---------- Hero Banner ---------- */
@@ -33,6 +34,7 @@
 .heroBreadcrumb {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 24px;
   font-size: 14px;
@@ -376,6 +378,7 @@
   overflow-x: auto;
   border-radius: 12px;
   border: 1px solid #e8eaf0;
+  -webkit-overflow-scrolling: touch;
 }
 
 .comparisonTable {
@@ -854,7 +857,18 @@
   }
 }
 
+@media (max-width: 768px) {
+  .twoColGrid, 
+  .twoColListGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 640px) {
+  .mainLayout {
+    padding: 24px 16px 60px;
+    gap: 24px;
+  }
   .heroBanner {
     padding: 50px 16px 40px;
   }
@@ -862,10 +876,10 @@
     padding: 24px 16px;
   }
   .infoGrid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
   .cardsGrid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
   .ctaStrip {
     flex-direction: column;
@@ -878,6 +892,13 @@
   .comparisonTable tbody td {
     padding: 10px 12px;
   }
+  .dataTable {
+    font-size: 12px;
+  }
+  .dataTable tbody td,
+  .dataTable thead th {
+    padding: 10px 12px;
+  }
   .heroStats {
     gap: 10px;
   }
@@ -886,3 +907,4 @@
     padding: 10px 14px;
   }
 }
+
