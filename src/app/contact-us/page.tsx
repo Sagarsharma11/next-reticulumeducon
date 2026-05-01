@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
+import CounsellingForm from "../../components/CounsellingForm/CounsellingForm";
+import { sendToWhatsApp } from "../../utils/helper";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -16,18 +18,7 @@ const ContactPage = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const sendToWhatsApp = (number: string) => {
-    const { firstName, lastName, email, phone, query } = formData;
-    if (!firstName || !phone || !query) {
-      alert("Please fill in your First Name, Phone Number, and Query before sending.");
-      return;
-    }
 
-    const text = `*New Website Inquiry*\n\n*Name:* ${firstName} ${lastName}\n*Email:* ${email || 'N/A'}\n*Phone:* ${phone}\n*Query:* ${query}`;
-    const encodedText = encodeURIComponent(text);
-    const url = `https://wa.me/91${number}?text=${encodedText}`;
-    window.open(url, "_blank");
-  };
 
   return (
     <>
@@ -35,7 +26,7 @@ const ContactPage = () => {
 
       <section className="bg-gray-50/50 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
               Get in Touch with Us
@@ -46,13 +37,13 @@ const ContactPage = () => {
           </div>
 
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-start">
-            
+
             {/* Left Column: Contact Info & Map */}
             <div className="lg:col-span-5 space-y-8">
-              
+
               <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100">
                 <h3 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center flex-shrink-0">
@@ -90,7 +81,7 @@ const ContactPage = () => {
                     <div>
                       <p className="text-sm font-semibold text-gray-900 mb-1">Email Address</p>
                       <a href="mailto:reticulumeducon@gmail.com" className="text-gray-600 hover:text-orange-600 text-sm transition-colors block">
-                        Reticulumeducon@gmail.com
+                        reticulumeducon@gmail.com
                       </a>
                     </div>
                   </div>
@@ -119,10 +110,10 @@ const ContactPage = () => {
 
               {/* Map embedded */}
               <div className="rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 h-64 bg-gray-200">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d898.8244452823602!2d85.21743877917665!3d25.694562907473244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed5d66d5959793%3A0xf8208c995c7b4b9e!2sRETICULUM%20EDUCON%20LLP!5e0!3m2!1sen!2sin!4v1643443515439!5m2!1sen!2sin" 
-                  className="w-full h-full border-0" 
-                  allowFullScreen={false} 
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d898.8244452823602!2d85.21743877917665!3d25.694562907473244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed5d66d5959793%3A0xf8208c995c7b4b9e!2sRETICULUM%20EDUCON%20LLP!5e0!3m2!1sen!2sin!4v1643443515439!5m2!1sen!2sin"
+                  className="w-full h-full border-0"
+                  allowFullScreen={false}
                   loading="lazy">
                 </iframe>
               </div>
@@ -130,7 +121,8 @@ const ContactPage = () => {
 
             {/* Right Column: Form */}
             <div className="lg:col-span-7">
-              <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-[0_20px_60px_rgb(0,0,0,0.06)] border border-gray-100">
+              <CounsellingForm formData={formData} handleChange={handleChange} sendToWhatsApp={sendToWhatsApp} />
+              {/* <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-[0_20px_60px_rgb(0,0,0,0.06)] border border-gray-100">
                 <h3 className="text-2xl font-bold text-gray-900 mb-8">Send us a Message</h3>
                 
                 <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
@@ -218,7 +210,7 @@ const ContactPage = () => {
                     </button>
                   </div>
                 </form>
-              </div>
+              </div> */}
             </div>
 
           </div>

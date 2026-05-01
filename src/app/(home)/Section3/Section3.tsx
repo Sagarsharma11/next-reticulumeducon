@@ -11,10 +11,10 @@ const Section3 = () => {
             foot: "Chairman, Reticulum Educon LLP"
         },
         {
-            name: "Tanzil Ahmad",
+            name: "Er. Tanzil Ahmad",
             title: "(Director)",
             message: "Message from the Director",
-            image: "/assets/images/tanjil ahmed1.jpeg",
+            image: "/assets/images/tanzil.jpeg",
             desc: "At Reticulum Educon LLP, as a director my journey has always been centered around one core vision — to empower students in achieving their dream of studying MBBS abroad with confidence and clarity.\n\nFrom the very beginning, I have wholeheartedly dedicated my time and efforts to the growth of this organization. What truly drives me is the personal bond we build with each student — a connection based on trust, understanding, and genuine care.\n\nIt is this relationship that has helped countless students place their faith in us. By staying closely connected with them, we've not only guided them towards the right opportunities but have also stood by them in resolving challenges, both big and small.\n\nAt Reticulum Educon, we don't just send students abroad — we walk every step of the journey with them. Your dreams are our mission, and your success is our greatest reward.",
             foot: "Director, Reticulum Educon LLP"
         }
@@ -39,7 +39,7 @@ const Section3 = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     {data.map((ele, key) => (
                         <div key={key} className="bg-white rounded-3xl p-8 sm:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 flex flex-col hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] transition-all duration-300">
-                            
+
                             {/* Header: Image & Title */}
                             <div className="flex items-center gap-6 mb-8 border-b border-gray-100 pb-8">
                                 <div className="w-24 h-24 rounded-full overflow-hidden shadow-md ring-4 ring-orange-50 flex-shrink-0">
@@ -53,7 +53,7 @@ const Section3 = () => {
                                     </span>
                                 </div>
                             </div>
-                            
+
                             {/* Content */}
                             <div className="flex-1 relative">
                                 <span className="absolute -top-4 -left-4 text-6xl text-orange-100 font-serif leading-none opacity-50 select-none">"</span>

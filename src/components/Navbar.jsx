@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import CounsellingModal from "./Modal/CounsellingModal";
 
 const countries = [
   { label: "Russia", slug: "russia", flag: "🇷🇺", region: "Eastern Europe" },
@@ -28,6 +29,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropOpen, setDropOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const dropRef = useRef(null);
 
   useEffect(() => {
@@ -547,7 +549,7 @@ export default function Navbar() {
             </a> */}
           </div>
           <div className="nb-topbar-right">
-            NMC &amp; WHO Approved Universities &nbsp;|&nbsp; <span>Free Counselling Available</span>
+            NMC &amp; WHO Approved Universities &nbsp;|&nbsp; <span onClick={() => setOpen(true)} className="cursor-pointer">Free Counselling Available</span>
           </div>
         </div>
       </div>
@@ -559,7 +561,11 @@ export default function Navbar() {
 
             {/* Logo */}
             <a href="/" className="nb-logo">
-              <img src="/assets/images/logo/logo.jpeg" alt="Reticulum Educon" />
+              <img src="/assets/images/logo/logo.jpeg" alt="Reticulum Educon"
+                // className="h-12 w-auto transform transition-transform duration-300 hover:scale-110"
+                className="h-12 w-auto transform transition-all duration-300 hover:scale-110 hover:-translate-y-0.5"
+
+              />
             </a>
 
             {/* Desktop links */}
@@ -621,9 +627,9 @@ export default function Navbar() {
             </ul>
 
             {/* CTA */}
-            <a href="/contact-us" className="nb-cta">
+            <p onClick={() => setOpen(true)} className="nb-cta cursor-pointer transition-all duration-300 animate-cta">
               📞 Free Counselling
-            </a>
+            </p>
 
             {/* Hamburger */}
             <button
@@ -686,6 +692,8 @@ export default function Navbar() {
           </a>
         </div>
       </div>
+
+      <CounsellingModal open={open} setOpen={setOpen} />
     </>
   );
 }

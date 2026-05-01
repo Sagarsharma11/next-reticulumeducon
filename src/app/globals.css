@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+
+/* globals.css */
+@keyframes ctaPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.6);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px 6px rgba(249, 115, 22, 0.3);
+    }
+}
+
+.animate-cta {
+    animation: ctaPulse 1.8s infinite;
+}
