@@ -12,6 +12,7 @@
     "@tailwindcss/postcss": "^4.0.17",
     "aos": "^2.3.4",
     "framer-motion": "^12.38.0",
+    "lucide-react": "^1.14.0",
     "next": "^16.1.1",
     "postcss": "^8.5.3",
     "react": "^19.2.3",

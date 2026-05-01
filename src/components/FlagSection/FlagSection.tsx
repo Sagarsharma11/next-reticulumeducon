@@ -13,34 +13,34 @@ const FlagSection = () => {
         autoplay: true,
         autoplaySpeed: 3000,
         cssEase: "ease-in-out",
-        slidesToShow: 6,  
-        slidesToScroll: 2, 
+        slidesToShow: 6,
+        slidesToScroll: 2,
         arrows: false,
         pauseOnHover: true,
         responsive: [
             {
-                breakpoint: 1280, 
+                breakpoint: 1280,
                 settings: {
                     slidesToShow: 5,
                     slidesToScroll: 2,
                 }
             },
             {
-                breakpoint: 1024, 
+                breakpoint: 1024,
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 2,
                 }
             },
             {
-                breakpoint: 768, 
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
                 }
             },
             {
-                breakpoint: 480, 
+                breakpoint: 480,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
@@ -64,11 +64,11 @@ const FlagSection = () => {
     ];
 
     return (
-        <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden relative border-b border-gray-100">
+        <section id="countries" className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden relative border-b border-gray-100">
             <style jsx global>{`
                 .flag-slider .slick-slide { padding: 0 10px; }
             `}</style>
-            
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
                     <span className="text-orange-500 font-bold uppercase tracking-wider text-sm mb-2 shadow-orange-500/20 inline-block px-3 py-1 bg-orange-50 rounded-full">Explore Destinations</span>
@@ -76,7 +76,7 @@ const FlagSection = () => {
                         Countries to Study <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">MBBS Abroad</span>
                     </h2>
                 </div>
-                
+
                 <div className="mx-[-10px]">
                     <Slider className="flag-slider" {...settings}>
                         {flagList.map((ele, idx) => (
@@ -88,7 +88,7 @@ const FlagSection = () => {
                                                 <img
                                                     src={ele.img}
                                                     alt={`Study MBBS in ${ele.country}`}
-                                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                                 />
                                             </div>
                                         </div>

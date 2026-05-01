@@ -24,9 +24,9 @@ export default function SimpleSlider() {
 
     const slideData = [
         {
-            img: "/assets/images/slider/slide1.jpg",
+            img: "/assets/images/slider/slide1.jpeg",
             title: "Welcome to Reticulum Educon",
-            subtitle: "Your Success Is Our Aim",
+            subtitle: "Connecting Dreams. Building futures",
             text: "Empowering students to achieve their dreams of studying MBBS abroad with expert guidance and unwavering support."
         },
         {

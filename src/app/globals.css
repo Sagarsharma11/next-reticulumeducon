@@ -19,3 +19,7 @@
 .animate-cta {
     animation: ctaPulse 1.8s infinite;
 }
+
+html {
+    scroll-behavior: smooth;
+}

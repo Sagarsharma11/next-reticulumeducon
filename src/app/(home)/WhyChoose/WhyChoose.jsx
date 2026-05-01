@@ -3,45 +3,45 @@ import React from 'react';
 const WhyChoose = () => {
     const features = [
         {
-            title: "Expert Medical Guidance",
-            desc: "Benefit from our qualified doctors panel and receive complete, transparent counseling from start to finish.",
-            icon: "👨‍⚕️"
-        },
-        {
-            title: "Direct University Access",
-            desc: "We ensure a direct approach to universities, selecting the best fit based on student needs and financial capacity.",
+            title: "World-Class Education",
+            desc: "Study at internationally recognized universities known for advanced teaching methods, modern infrastructure, and well-equipped laboratories.",
             icon: "🏛️"
         },
         {
-            title: "End-to-End Support",
-            desc: "From local office assistance to post-admission and personal support, we are with you at every step.",
-            icon: "🤝"
+            title: "Affordable Fees",
+            desc: "MBBS abroad is cost-effective and fits within budget compared to private medical colleges in India.",
+            icon: "💰"
         },
         {
-            title: "Safety & Comfort",
-            desc: "Student safety and comfort is our top priority. We provide dedicated local representatives abroad.",
-            icon: "🛡️"
+            title: "Extensive Clinical Exposure",
+            desc: "Strong hospital affiliations provide hands-on clinical training and real-world experience.",
+            icon: "🏥"
         },
         {
-            title: "Highest Satisfaction Ratio",
-            desc: "Our Parent Satisfaction Ratio (PSR) and Student Satisfaction Ratio (SSR) are the highest in the industry.",
-            icon: "⭐"
+            title: "Global Recognition",
+            desc: "Universities are approved by NMC/MCI, WHO, ECFMG, and USMLE, ensuring global career opportunities.",
+            icon: "🌍"
         },
         {
-            title: "Lifelong Mentorship",
-            desc: "Students remain under our direct guidance for the entire duration of their course. Our reputation speaks for itself.",
-            icon: "🎓"
+            title: "English-Medium Programs",
+            desc: "All courses are taught in English, ensuring smooth learning for Indian students.",
+            icon: "📘"
+        },
+        {
+            title: "Government Universities",
+            desc: "All colleges and universities are government-recognized institutions in their respective countries.",
+            icon: "🏫"
         }
     ];
 
     return (
         <section className="py-16 md:py-24 bg-slate-50 relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+
                 <div className="text-center mb-16">
                     <span className="text-orange-500 font-bold uppercase tracking-wider text-sm mb-2 shadow-orange-500/20 inline-block px-3 py-1 bg-orange-100 rounded-full">Our Core Values</span>
                     <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">
-                        Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">Reticulum Educon?</span>
+                        Why Study <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600"> MBBS Abroad?</span>
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
                         Discover the key features that make us the most trusted partner for your medical journey abroad.
@@ -68,7 +68,7 @@ const WhyChoose = () => {
                 <div className="mt-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-8 sm:p-10 text-center text-white shadow-[0_8px_30px_rgba(249,115,22,0.3)] relative overflow-hidden">
                     <div className="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-white opacity-10 blur-2xl"></div>
                     <div className="absolute bottom-0 left-0 -ml-8 -mb-8 w-32 h-32 rounded-full bg-white opacity-10 blur-2xl"></div>
-                    
+
                     <h3 className="text-2xl sm:text-3xl font-bold mb-4 relative z-10">We prioritize absolute transparency.</h3>
                     <p className="text-orange-100 max-w-3xl mx-auto text-lg mb-8 relative z-10">
                         We always prefer to share contact details of our ex-students and students currently studying in various countries, along with their parents' details. Speak directly with them to know the facts and reality on a first-hand basis!
