@@ -16,7 +16,7 @@ export default function SimpleSlider() {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 8000,
         cssEase: "ease-in-out",
         pauseOnHover: false,
         arrows: false,
@@ -25,9 +25,9 @@ export default function SimpleSlider() {
     const slideData = [
         {
             img: "/assets/images/slider/slide1.jpeg",
-            title: "Welcome to Reticulum Educon",
-            subtitle: "Connecting Dreams. Building futures",
-            text: "Empowering students to achieve their dreams of studying MBBS abroad with expert guidance and unwavering support."
+            title: "Your Trusted Partner for MBBS Abroad",
+            subtitle: "Guiding Excellence Beyond Borders",
+            text: "Helping students and families achieve their dream of studying MBBS abroad with expert guidance, transparency, and genuine care."
         },
         {
             img: "/assets/images/slider/slide2.jpg",
