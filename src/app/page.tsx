@@ -9,6 +9,7 @@ import Service from "./(home)/Service/Service";
 import Section3 from "./(home)/Section3/Section3";
 import FlagSection from "../components/FlagSection/FlagSection";
 import WhyChooseReticulum from "./(home)/WhyChoose2/WhyChooseReticulum";
+import Testimonials from "./(home)/Testimonials/Testimonials";
 
 
 
@@ -22,6 +23,7 @@ export default function Home() {
       <Section3 />
       <MbbsAbroad />
       <WhyChooseReticulum />
+      <Testimonials />
       <LatestNews />
       <Service />
 
