@@ -203,7 +203,7 @@ const Testimonials = () => {
                                             <Avatar img={t.img} initials={t.initials} />
                                             <div>
                                                 <p className="text-gray-900 text-sm font-bold leading-tight">{t.name}</p>
-                                                <p className="text-orange-500 text-xs font-medium mt-0.5">Verified Student</p>
+                                                {/* <p className="text-orange-500 text-xs font-medium mt-0.5">Verified Student</p> */}
                                             </div>
                                         </div>
 

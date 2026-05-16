@@ -36,7 +36,7 @@ const Footer = () => {
 
           {/* Social Icons */}
           <div className="flex flex-wrap gap-3">
-            {[
+            {/* {[
               { icon: FaTwitter, link: "https://x.com/RETICULUMEDUCON" },
               { icon: FaYoutube, link: "https://www.youtube.com/@mbbs-abroad_reticulum" },
               { icon: FaFacebookF, link: "https://www.facebook.com/people/Reticulum-Educon/61575752228683/?mibextid=wwXIfr&rdid=SjnWWZOp7WdTxge9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BK4z7iWQ8%2F%3Fmibextid%3DwwXIfr" },
@@ -50,6 +50,28 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:bg-orange-500 hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-lg"
+              >
+                <social.icon size={16} />
+              </a>
+            ))} */}
+            {[
+              { icon: FaTwitter, link: "https://x.com/RETICULUMEDUCON", bg: "#000000", color: "#ffffff" },
+              { icon: FaYoutube, link: "https://www.youtube.com/@mbbs-abroad_reticulum", bg: "#FF0000", color: "#ffffff" },
+              { icon: FaFacebookF, link: "https://www.facebook.com/people/Reticulum-Educon/...", bg: "#1877F2", color: "#ffffff" },
+              { icon: FaWhatsapp, link: "https://wa.me/917667962400", bg: "#25D366", color: "#ffffff" },
+              { icon: FaLinkedinIn, link: "https://www.linkedin.com/in/reticulum-educon-937187229", bg: "#0A66C2", color: "#ffffff" },
+              {
+                icon: FaInstagram, link: "https://www.instagram.com/reticulum_mbbsabroad?igsh=NmtsNXQ2Zm02aDNk",
+                bg: "radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%)", color: "#ffffff"
+              }
+            ].map((social, idx) => (
+              <a
+                key={idx}
+                href={social.link}
+                target="_blank"
+                rel="noreferrer"
+                style={{ background: social.bg, color: social.color }}
+                className="w-10 h-10 rounded-full flex items-center justify-center hover:-translate-y-1 transition-all duration-300 shadow-lg"
               >
                 <social.icon size={16} />
               </a>
@@ -78,7 +100,7 @@ const Footer = () => {
         <div className="lg:col-span-1">
           <h3 className="text-white font-bold text-lg mb-6">Destinations</h3>
           <ul className="space-y-3 text-sm text-gray-400 font-medium">
-            {['Russia', 'Kazakhstan', 'Georgia', 'Uzbekistan', 'Bangladesh'].map((country, idx) => (
+            {['Russia', 'Kazakhstan', 'Georgia', 'Uzbekistan', 'Bangladesh', 'Belarus', 'Kyrgyzstan', 'Nepal'].map((country, idx) => (
               <li key={idx}>
                 <a href={`/mbbs/${country.toLowerCase()}`} className="hover:text-orange-400 hover:translate-x-1 inline-block transition-all duration-300">
                   Study in {country}
@@ -124,13 +146,25 @@ const Footer = () => {
 
                 <div className="space-y-6">
 
+                  {/* Karnataka */}
+                  <div className="flex items-start gap-4 text-sm text-gray-400">
+                    <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-orange-500">
+                      <FaMapMarkerAlt size={16} />
+                    </div>
+                    <p className="pt-1 leading-relaxed">
+                      <strong className="text-white block mb-1">Bengaluru, Karnataka</strong>
+                      26/3-58 , 1st floor , opp Sangeetha mobiles , new bank colony , konanakute, Bengaluru
+
+                    </p>
+                  </div>
+
                   {/* Odisha */}
                   <div className="flex items-start gap-4 text-sm text-gray-400">
                     <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-orange-500">
                       <FaMapMarkerAlt size={16} />
                     </div>
                     <p className="pt-1 leading-relaxed">
-                      <strong className="text-white block mb-1">Odisha</strong>
+                      <strong className="text-white block mb-1">Bhubaneswar, Odisha</strong>
                       Plot No. 1552/9266, Ground Floor, Satya Vihar, Bhomikhal (Near Apollo Pharma), Bhubaneswar, Khorda, Odisha – 751010
                     </p>
                   </div>
@@ -169,17 +203,9 @@ const Footer = () => {
               <div className="pt-1 flex flex-col">
                 <a href="tel:8862851969" className="hover:text-orange-400 transition-colors">88628-51969</a>
                 <a href="tel:7667962400" className="hover:text-orange-400 transition-colors">76679-62400</a>
+                <a href="tel:7665865778" className="hover:text-orange-400 transition-colors">76658-65778</a>
               </div>
             </div>
-
-            {/* <div className="flex items-center gap-4 text-sm text-gray-400">
-              <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 text-orange-500">
-                <FaEnvelope size={14} />
-              </div>
-              <div className="pt-1 text-orange-400 hover:text-white transition-colors cursor-pointer">
-                info@reticulum.com
-              </div>
-            </div> */}
           </div>
         </div>
 
@@ -204,7 +230,7 @@ const Footer = () => {
         </div>
       </div>
 
-    </footer>
+    </footer >
   );
 };
 

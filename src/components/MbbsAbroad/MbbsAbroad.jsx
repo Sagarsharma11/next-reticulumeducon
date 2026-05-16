@@ -122,7 +122,7 @@ const MbbsAbroad = () => {
     ];
 
     return (
-        <section className="py-16 md:py-24 bg-white relative border-t border-gray-100 overflow-hidden">
+        <section id="universities" className="py-16 md:py-24 bg-white relative border-t border-gray-100 overflow-hidden">
             <style jsx global>{`
                 .uni-slider .slick-slide { padding: 0 12px; }
             `}</style>

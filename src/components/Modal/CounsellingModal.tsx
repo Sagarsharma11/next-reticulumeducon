@@ -1,49 +1,4 @@
-// "use client";
-
-// import { useState } from "react";
-// import Modal from "./Modal";
-// import CounsellingForm from "../CounsellingForm/CounsellingForm";
-// import { sendToWhatsApp } from "../../utils/helper";
-// import { FiX } from "react-icons/fi";
-
-// export default function CounsellingModal({ open, setOpen }: any) {
-//     const [formData, setFormData] = useState({
-//         firstName: "",
-//         lastName: "",
-//         email: "",
-//         phone: "",
-//         query: ""
-//     });
-
-//     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-//         setFormData({ ...formData, [e.target.name]: e.target.value });
-//     };
-
-
-//     return (
-//         <div>
-
-
-//             {/* Modal */}
-//             <Modal isOpen={open} onClose={() => setOpen(false)}>
-
-//                 <button
-//                     onClick={() => setOpen(false)}
-//                     className="absolute top-[8rem] right-[29rem] text-gray-500 hover:text-black transition cursor-pointer"
-//                 >
-//                     <FiX size={22} color="#ea580c" />
-//                 </button>
-
-//                 <CounsellingForm formData={formData} handleChange={handleChange} sendToWhatsApp={sendToWhatsApp} />
-
-
-//             </Modal>
-//         </div>
-//     );
-// }
-
 "use client";
-
 import { useState } from "react";
 import Modal from "./Modal";
 import CounsellingForm from "../CounsellingForm/CounsellingForm";
@@ -56,11 +11,15 @@ export default function CounsellingModal({ open, setOpen }: any) {
         lastName: "",
         email: "",
         phone: "",
+        neetScore: "",
+        twelfthPercent: "",
+        country: "",
+        university: "",
         query: ""
     });
 
     const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
     ) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };

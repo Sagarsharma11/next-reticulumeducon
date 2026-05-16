@@ -12,7 +12,8 @@ const countries = [
   { label: "Kyrgyzstan", slug: "kyrgyzstan", flag: "🇰🇬", region: "Central Asia" },
   { label: "Uzbekistan", slug: "uzbekistan", flag: "🇺🇿", region: "Central Asia" },
   { label: "Nepal", slug: "nepal", flag: "🇳🇵", region: "South Asia" },
-  { label: "Philippines", slug: "philippines", flag: "🇵🇭", region: "Southeast Asia" },
+  // { label: "Philippines", slug: "philippines", flag: "🇵🇭", region: "Southeast Asia" },
+  { label: "Bangladesh", slug: "bangladesh", flag: "🇧🇩", region: "South Asia" },
   // { label: "Malaysia", slug: "malaysia", flag: "🇲🇾", region: "Southeast Asia" },
   { label: "Kazakhstan", slug: "kazakhstan", flag: "🇰🇿", region: "Central Asia" },
 ];
@@ -612,9 +613,12 @@ export default function Navbar() {
                   {/* Footer */}
                   <div className="nb-mega-footer">
                     <span className="nb-mega-footer-text">Need help choosing?</span>
-                    <a href="/contact-us" className="nb-mega-footer-link" onClick={() => setDropOpen(false)}>
+                    {/* <a href="/contact-us" className="nb-mega-footer-link" onClick={() => setDropOpen(false)}>
                       Free Counselling →
-                    </a>
+                    </a> */}
+                    <button className="nb-mega-footer-link cursor-pointer" onClick={() => { setDropOpen(false); setOpen(true) }}>
+                      Free Counselling →
+                    </button>
                   </div>
                 </div>
               </li>
@@ -687,9 +691,9 @@ export default function Navbar() {
         </div>
 
         <div className="nb-drawer-cta">
-          <a href="/contact-us" onClick={() => setMobileOpen(false)}>
+          <button onClick={() => setOpen(true)}>
             📞 Get Free Counselling
-          </a>
+          </button>
         </div>
       </div>
 
