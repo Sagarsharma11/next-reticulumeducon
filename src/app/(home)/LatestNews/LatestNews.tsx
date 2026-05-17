@@ -2,11 +2,13 @@ import React from 'react';
 
 const LatestNews = () => {
     const ytData = [
+        "https://www.youtube.com/embed/-PnAR5MzJk0",
+        "https://www.youtube.com/embed/36J6L__x9oA",
         "https://www.youtube.com/embed/rZVMgA1t24w",
         "https://www.youtube.com/embed/z94mNxRXhhM",
         "https://www.youtube.com/embed/3vp36Ah2mdI",
         "https://www.youtube.com/embed/TQFChXDxtNk",
-        "https://www.youtube.com/embed/jNtR5qjKkSU"
+        "https://www.youtube.com/embed/jNtR5qjKkSU",
     ];
 
     return (
